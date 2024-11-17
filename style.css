@@ -1,0 +1,291 @@
+/* Reset body margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sour Gummy', Arial, sans-serif;
+    background-color: #CB9DF0;
+    overflow-x: hidden;
+}
+
+/* Background styling for falling flowers */
+.falling-flowers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Centered box styling */
+/* Centered box styling */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in forwards;
+    opacity: 1; /* Make sure it's visible by default */
+}
+
+/* Fade-in animation for the box */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Button styling */
+#movingButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+#movingButton:hover {
+    background-color: #ff1493;
+}
+
+/* Hidden sections styling */
+/* Hidden sections styling */
+.hidden-sections {
+    margin-top: 100vh; /* Positioned below the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px; /* Increased space between divs */
+    padding-top: 50px;
+    margin-bottom: 50px; /* Add gap after the last div */
+}
+
+
+/* Styling for each record box */
+.record-box {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding-bottom: 30px; 
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Start from below the viewport */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* The image inside the record box, centered */
+.record-box .rotating-disk {
+    width: 70%; /* Make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px;
+    transition: transform 1s ease-out; /* Smooth rotation */
+    animation: rotateImage 10s linear infinite; /* Continuous rotation */
+    margin-left: 0px;
+}
+
+/* Rotate the image on scroll */
+.record-box.visible img {
+    transform: rotate(360deg); /* Rotate the image when the div becomes visible */
+}
+
+/* Text aligned outside the div to the left */
+.record-box .record-title {
+    position: absolute;
+    top: 10px;
+    left: -50px; /* Positioned outside to the left */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transform: translateY(-50%);
+}
+
+/* When the record box is visible */
+.record-box.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move into place */
+}
+
+/* Continuous rotation animation */
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* Complete one full rotation */
+    }
+}
+
+/* Flower animation */
+.flower {
+    position: absolute;
+    top: -50px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Keyframes for falling effect */
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+.bg1{
+    background-image: url('img/whoopsie1.png');
+}
+
+.pol-1{
+    width: 220px;
+    height: 240px;
+    position: absolute;
+    left: 100px;
+    top: 980px;
+    transform: rotate(-10deg);
+}
+.pol-2{
+    position: absolute;
+    height: 250px;
+    left: 1150px;
+    top: 1090px;
+    transform: rotate(10deg);
+}
+.pol-3{
+    height: 180px;
+    position: absolute;
+    left: 100px;
+    top: 1480px;
+    transform: rotate(17deg);
+}
+.pol-4{
+    position: absolute;
+    height: 200px;
+    left: 1150px;
+    top: 1580px;
+    transform: rotate(-17deg);
+}
+.pol-5{
+    width: 220px;
+    height: 240px;
+    position: absolute;
+    left: 100px;
+    top: 1990px;
+    transform: rotate(-10deg);
+
+}
+.pol-6{
+    height: 240px;
+    position: absolute;
+    left: 1150px;
+    top: 2150px;
+    transform: rotate(10deg);
+
+}
+.pol-7{
+    height: 250px;
+    position: absolute;
+    left: 60px;
+    top: 2600px;
+    transform: rotate(10deg);
+
+}
+.pol-8{
+    height: 240px;
+    position: absolute;
+    left: 1100px;
+    top: 2850px;
+    transform: rotate(-10deg);
+
+}
+.pol-9{
+    height: 250px;
+    position: absolute;
+    left: 125px;
+    top: 3100px;
+    transform: rotate(-10deg);
+
+}
+.pol-10{
+    height: 240px;
+    position: absolute;
+    left: 1150px;
+    top: 3400px;
+    transform: rotate(10deg);
+
+}
+.pol-11{
+    height: 240px;
+    position: absolute;
+    left: 125px;
+    top: 3600px;
+    transform: rotate(10deg);
+
+}
+.static-img{
+    width: 50%;
+}
+
+.record-box:nth-child(17) {
+    background-color: #ffdca4; 
+  }
+  
+  .record-box:nth-child(2) {
+    background-color: #d45c4c;
+  }
+  
+  .record-box:nth-child(10) {
+    background-color: #dd5957; 
+  }
+  
+  .record-box:nth-child(4) {
+    background-color: #de727a; 
+  }
+  
+  .record-box:nth-child(8) {
+    background-color: #fe4068; 
+  }
+  
+  .record-box:nth-child(6) {
+    background-color: #cdd4ee;
+  }
+  
+.center-box .typewriter-text {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid black; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
+
