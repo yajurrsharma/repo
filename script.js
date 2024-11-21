@@ -1,6 +1,6 @@
 // Utility function to get the fixed page dimensions
 function getPageDimensions() {
-    return { pageWidth: 441, pageHeight: 409 }; // Fixed width and height
+    return { pageWidth: 221, pageHeight: 203 }; // Fixed width and height
 }
 
 // Generate random flowers for falling effect
